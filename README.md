@@ -35,7 +35,7 @@ const similarSearch = new scopemedia.image.SimilarSearch(clientId, clientSecret)
 ```
 
 ### .addImage
-Add images to your application
+Add image(s) to your application's image set
 
 ##### Input
 ```
@@ -65,7 +65,7 @@ similarSearch.addImage({
 ```
 
 ### .getAllImage
-Get the image set in your application
+Get your application's image set
 
 ##### Input
 ```
@@ -93,7 +93,7 @@ similarSearch.getAllImage({
 ```
 
 ### .searchImage
-Given an image, search similar image from your application's image set
+Search similar image from your image set
 
 ##### Input
 ```
@@ -143,7 +143,7 @@ const imagePrediction = new scopemedia.image.Prediction(clientId, clientSecret);
 ```
 
 ### .getModels
-Get the list of available image prediction model
+Get the list of prediction model
 
 ##### Return
 String array
