@@ -2,12 +2,12 @@ import RequestHandler from '../RequestHandler.js';
 
 export default class Prediction {
   constructor(clientId, clientSecret) {
+    this.requestHandler = new RequestHandler(clientId, clientSecret);
     this.models = {
       DOG: 'dog',
       FASHION: 'fashion-v1',
       GENERAL: 'general-v3'
     };
-    this.requestHandler = new RequestHandler(clientId, clientSecret);
   }
 
   getModels() {

@@ -326,12 +326,12 @@ var Prediction = function () {
   function Prediction(clientId, clientSecret) {
     _classCallCheck(this, Prediction);
 
+    this.requestHandler = new _RequestHandler2.default(clientId, clientSecret);
     this.models = {
       DOG: 'dog',
       FASHION: 'fashion-v1',
       GENERAL: 'general-v3'
     };
-    this.requestHandler = new _RequestHandler2.default(clientId, clientSecret);
   }
 
   _createClass(Prediction, [{

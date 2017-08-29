@@ -8,6 +8,10 @@ const similarSearch = new scopemedia.image.SimilarSearch(clientId, clientSecret)
 
 const imagePrediction = new scopemedia.image.Prediction(clientId, clientSecret);
 
+console.log(imagePrediction.models);
+
+console.log(imagePrediction.getModels());
+
 imagePrediction.predictImage({
   modelId: imagePrediction.models.DOG,
   mediaUrl: 'http://cdn.ndtv.com/tech/images/gadgets/pikachu_hi_pokemon.jpg?output-quality=80'
