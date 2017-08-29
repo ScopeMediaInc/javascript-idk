@@ -175,10 +175,10 @@ Promise
 ```js
 
 /*
-  The following models are available in model property:
-  models.GENERAL
-  models.DOG
-  models.FASHION
+  The following models are available in models property:
+  GENERAL
+  DOG
+  FASHION
 */
 
 imagePrediction.predictImage({
