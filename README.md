@@ -102,7 +102,7 @@ Search similar image from your image set
 ##### Input
 ```
 {
-  // only one of mediaId, mediaUrl and base64 is required
+  // only one of mediaId, mediaUrl or base64 is required
   mediaId: an image ID from your application image set,
   mediaUrl: an image URL,
   base64: a base64 encoded image,
@@ -164,7 +164,7 @@ console.log(predictionModels);
 ```
 {
   modelId: prediction model,
-  // only one of mediaUrl and base64 is required
+  // only one of mediaUrl or base64 is required
   mediaUrl: an image URL,
   base64: a base64 encoded image,
   // optional
