@@ -148,7 +148,7 @@ Get the list of available image prediction model
 ##### Return
 String array
 
-### Example
+##### Example
 ```js
 const predictionModels = imagePrediction.getModels();
 console.log(predictionModels);
@@ -171,7 +171,7 @@ console.log(predictionModels);
 ##### Return
 Promise
 
-### Example
+##### Example
 ```js
 imagePrediction.predictImage({
   modelId: imagePrediction.models.GENERAL,
