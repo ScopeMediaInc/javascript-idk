@@ -38,7 +38,7 @@ const similarSearch = new scopemedia.image.SimilarSearch(clientId, clientSecret)
 Add images to your application
 
 ##### Input
-```js
+```
 {
   medias: array of image url
 }
@@ -68,7 +68,7 @@ similarSearch.addImage({
 Get the image set in your application
 
 ##### Input
-```js
+```
 {
   page: pagination number,
   size: number of images per page
@@ -96,7 +96,7 @@ similarSearch.getAllImage({
 Given an image, search similar image from your application's image set
 
 ##### Input
-```js
+```
 {
   // only one of mediaId, mediaUrl and base64 is required
   mediaId: an image ID from your application image set,
@@ -157,7 +157,7 @@ console.log(predictionModels);
 ### .predictImage
 
 ##### Input
-```js
+```
 {
   // only one of mediaUrl and base64 is required
   modelId: prediction model,
