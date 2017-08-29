@@ -56,7 +56,47 @@ Given an image, search similar image from your application's image set
 
 ```js
 similarSearch.searchImage({
-  mediaUrl: 'http://example.com/example_1.jpg'
+  mediaUrl: 'https://example.com/example_1.jpg'
+})
+.then((response) => {
+  console.log(response);
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+Image Prediction
+-----
+
+### Initialization
+
+```js
+// Obtain your application's client ID and secret from dashboard
+const clientId = 'YOUR CLIENT ID';
+const clientSecret = 'YOUR CLIENT SECRET';
+
+const imagePrediction = new scopemedia.image.Prediction(clientId, clientSecret);
+```
+
+### getModels
+
+```js
+imagePrediction.getModels()
+.then((response) => {
+  console.log(response);
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+### predictImage
+
+```js
+imagePrediction.predictImage({
+  modelId: imagePrediction.models.GENERAL,
+  mediaUrl: 'https://example.com/example_1.jpg'
 })
 .then((response) => {
   console.log(response);

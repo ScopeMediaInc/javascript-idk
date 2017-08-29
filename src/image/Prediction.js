@@ -2,15 +2,20 @@ import RequestHandler from '../RequestHandler.js';
 
 export default class Prediction {
   constructor(clientId, clientSecret) {
+    this.models = {
+      DOG: 'dog',
+      FASHION: 'fashion-v1',
+      GENERAL: 'general-v3'
+    }
     this.requestHandler = new RequestHandler(clientId, clientSecret);
   }
 
-  getModels() {
+  /*getModels() {
     return this.requestHandler.sendRequest({
       method: 'GET',
       apiUrl: '/tagging/v2/models'
     });
-  }
+  }*/
 
   predictImage({modelId, mediaUrl, base64, area}) {
     var payload = {};
