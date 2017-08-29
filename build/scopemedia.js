@@ -326,16 +326,27 @@ var Prediction = function () {
   function Prediction(clientId, clientSecret) {
     _classCallCheck(this, Prediction);
 
+    this.models = {
+      DOG: 'dog',
+      FASHION: 'fashion-v1',
+      GENERAL: 'general-v3'
+    };
     this.requestHandler = new _RequestHandler2.default(clientId, clientSecret);
   }
 
   _createClass(Prediction, [{
     key: 'getModels',
     value: function getModels() {
-      return this.requestHandler.sendRequest({
-        method: 'GET',
-        apiUrl: '/tagging/v2/models'
+      var _this = this;
+
+      // API: /tagging/v2/models
+      var models = [];
+
+      Object.keys(this.models).forEach(function (key) {
+        models.push(_this.models[key]);
       });
+
+      return models;
     }
   }, {
     key: 'predictImage',
