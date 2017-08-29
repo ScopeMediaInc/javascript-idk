@@ -163,8 +163,8 @@ console.log(predictionModels);
 ##### Input
 ```
 {
-  // only one of mediaUrl and base64 is required
   modelId: prediction model,
+  // only one of mediaUrl and base64 is required
   mediaUrl: an image URL,
   base64: a base64 encoded image,
   // optional
