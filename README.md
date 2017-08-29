@@ -173,6 +173,14 @@ Promise
 
 ##### Example
 ```js
+
+/*
+  The following models are available in model property:
+  models.GENERAL
+  models.DOG
+  models.FASHION
+*/
+
 imagePrediction.predictImage({
   modelId: imagePrediction.models.GENERAL,
   mediaUrl: 'https://example.com/example_1.jpg',
