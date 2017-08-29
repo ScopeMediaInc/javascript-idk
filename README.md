@@ -40,7 +40,7 @@ Add images to your application
 ##### Input
 ```js
 {
-  medias: /* array of image url */
+  medias: array of image url
 }
 ```
 
@@ -66,11 +66,12 @@ similarSearch.addImage({
 
 ### .getAllImage
 Get the image set in your application
-```js
+
 ##### Input
+```js
 {
-  page: /* pagination number */,
-  size: /* number of images per page */
+  page: pagination number,
+  size: number of images per page
 }
 ```
 
@@ -97,10 +98,10 @@ Given an image, search similar image from your application's image set
 ##### Input
 ```js
 {
-  mediaId: `an image ID from your application image set. one of mediaId, mediaUrl and base64 is required`,
-  mediaUrl: `an image URL. one of mediaId, mediaUrl and base64 is required`,
-  base64: `a base64 encoded image. one of mediaId, mediaUrl and base64 is required`,
-  area: `_optional_ rectangle within the input image for search (see example) `
+  mediaId: an image ID from your application image set. one of mediaId, mediaUrl and base64 is required,
+  mediaUrl: an image URL. one of mediaId, mediaUrl and base64 is required,
+  base64: a base64 encoded image. one of mediaId, mediaUrl and base64 is required,
+  area: _optional_ rectangle within the input image for search (see example)
 }
 ```
 
@@ -156,10 +157,10 @@ console.log(predictionModels);
 ##### Input
 ```js
 {
-  modelId: `prediction model`,
-  mediaUrl: `an image URL. one of mediaUrl and base64 is required`,
-  base64: `a base64 encoded image. one of mediaUrl and base64 is required`,
-  area: `_optional_ rectangle within the input image for prediction (see example) `
+  modelId: prediction model,
+  mediaUrl: an image URL. one of mediaUrl and base64 is required,
+  base64: a base64 encoded image. one of mediaUrl and base64 is required,
+  area: _optional_ rectangle within the input image for prediction (see example)
 }
 ```
 
