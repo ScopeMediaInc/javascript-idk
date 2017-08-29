@@ -98,10 +98,12 @@ Given an image, search similar image from your application's image set
 ##### Input
 ```js
 {
-  mediaId: an image ID from your application image set. one of mediaId, mediaUrl and base64 is required,
-  mediaUrl: an image URL. one of mediaId, mediaUrl and base64 is required,
-  base64: a base64 encoded image. one of mediaId, mediaUrl and base64 is required,
-  area: _optional_ rectangle within the input image for search (see example)
+  // only one of mediaId, mediaUrl and base64 is required
+  mediaId: an image ID from your application image set,
+  mediaUrl: an image URL,
+  base64: a base64 encoded image,
+  // optional
+  area: rectangle within the input image for search (see example)
 }
 ```
 
@@ -157,10 +159,12 @@ console.log(predictionModels);
 ##### Input
 ```js
 {
+  // only one of mediaUrl and base64 is required
   modelId: prediction model,
-  mediaUrl: an image URL. one of mediaUrl and base64 is required,
-  base64: a base64 encoded image. one of mediaUrl and base64 is required,
-  area: _optional_ rectangle within the input image for prediction (see example)
+  mediaUrl: an image URL,
+  base64: a base64 encoded image,
+  // optional
+  area: rectangle within the input image for prediction (see example)
 }
 ```
 
