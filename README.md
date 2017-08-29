@@ -73,22 +73,10 @@ Image Prediction
 
 ```js
 // Obtain your application's client ID and secret from dashboard
-const clientId = 'YOUR CLIENT ID';
-const clientSecret = 'YOUR CLIENT SECRET';
+const clientId = 'YOUR_CLIENT_ID';
+const clientSecret = 'YOUR_CLIENT_SECRET';
 
 const imagePrediction = new scopemedia.image.Prediction(clientId, clientSecret);
-```
-
-### getModels
-
-```js
-imagePrediction.getModels()
-.then((response) => {
-  console.log(response);
-})
-.catch((error) => {
-  console.log(error);
-});
 ```
 
 ### predictImage
