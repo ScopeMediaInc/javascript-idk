@@ -3,7 +3,7 @@ ScopeMedia JavaScript SDK
 
 A JavaScript SDK to easily integrate [ScopeMedia API](https://developer.scopemedia.com/documentation/) in your application
 
-Similar Search
+Similar Image Search
 -----
 
 ### Initialization
@@ -77,6 +77,13 @@ const clientId = 'YOUR_CLIENT_ID';
 const clientSecret = 'YOUR_CLIENT_SECRET';
 
 const imagePrediction = new scopemedia.image.Prediction(clientId, clientSecret);
+```
+
+### getModels
+
+```js
+const predictionModels = imagePrediction.getModels();
+console.log(predictionModels);
 ```
 
 ### predictImage

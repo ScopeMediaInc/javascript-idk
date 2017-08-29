@@ -10,14 +10,16 @@ export default class Prediction {
     this.requestHandler = new RequestHandler(clientId, clientSecret);
   }
 
-  /*
   getModels() {
-    return this.requestHandler.sendRequest({
-      method: 'GET',
-      apiUrl: '/tagging/v2/models'
+    // API: /tagging/v2/models
+    var models = [];
+
+    Object.keys(this.models).forEach((key) => {
+      models.push(this.models[key]);
     });
+
+    return models;
   }
-  */
 
   predictImage({modelId, mediaUrl, base64, area}) {
     var payload = {};

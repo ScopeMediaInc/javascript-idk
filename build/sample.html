@@ -1,0 +1,22 @@
+<script src="./scopemedia.min.js"></script>
+<script>
+// Obtain your application's client ID and secret from dashboard
+const clientId = 'yN0LWbWRDedrPEWXiiUCnUSnGasYYGwHB7BzPiihj11s4xxSDlQI6AoNZwjHnUvn';
+const clientSecret = '0CfRhwxqO5C2J8qBTQyiHoQYFlCM7KB4op0yqcBMfFRJjBI6gLJIaCLwONhdXjrZ';
+
+const similarSearch = new scopemedia.image.SimilarSearch(clientId, clientSecret);
+
+const imagePrediction = new scopemedia.image.Prediction(clientId, clientSecret);
+
+imagePrediction.predictImage({
+  modelId: imagePrediction.models.DOG,
+  mediaUrl: 'http://cdn.ndtv.com/tech/images/gadgets/pikachu_hi_pokemon.jpg?output-quality=80'
+})
+.then((response) => {
+  console.log(response);
+})
+.catch((error) => {
+  console.log(error);
+});
+
+</script>
