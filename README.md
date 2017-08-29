@@ -3,6 +3,26 @@ ScopeMedia JavaScript SDK
 
 A JavaScript SDK to easily integrate [ScopeMedia API](https://developer.scopemedia.com/documentation/) in your application
 
+Installation
+-----
+
+Get the latest build SDK in **/build** folder or from ScopeMedia server: [https://developer.scopemedia.com/js/scopemedia.min.js](https://developer.scopemedia.com/js/scopemedia.min.js)
+
+Script tag:
+```js
+<script type="text/javascript" src="https://developer.scopemedia.com/js/scopemedia.min.js"></script>
+```
+
+CommonJS:
+```js
+import scopemedia from 'PATH_TO/scopemedia.min.js';
+```
+
+AMD:
+```js
+const scopemedia from 'PATH_TO/scopemedia.min.js';
+```
+
 Similar Image Search
 -----
 
