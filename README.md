@@ -38,11 +38,9 @@ const similarSearch = new scopemedia.image.SimilarSearch(clientId, clientSecret)
 Add images to your application
 
 ##### Input
-```js
 {
-  medias: array of image url
+  medias: _array of image url_
 }
-```
 
 ##### Return
 Promise
@@ -68,12 +66,10 @@ similarSearch.addImage({
 Get the image set in your application
 
 ##### Input
-```js
 {
-  page: `pagination number`,
-  size: `number of images per page`
+  page: _pagination number_,
+  size: _number of images per page_
 }
-```
 
 ##### Return
 Promise
