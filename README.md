@@ -39,6 +39,13 @@ const similarSearch = new scopemedia.image.SimilarSearch(clientId, clientSecret)
 ### .addImage
 Add images to your application
 
+#### Parameters
+```
+{
+  medias: array of image url
+}
+```
+
 ```js
 similarSearch.addImage({
   medias: [
@@ -99,14 +106,14 @@ const clientSecret = 'YOUR_CLIENT_SECRET';
 const imagePrediction = new scopemedia.image.Prediction(clientId, clientSecret);
 ```
 
-### getModels
+### .getModels
 
 ```js
 const predictionModels = imagePrediction.getModels();
 console.log(predictionModels);
 ```
 
-### predictImage
+### .predictImage
 
 ```js
 imagePrediction.predictImage({
