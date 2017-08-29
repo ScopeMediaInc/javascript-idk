@@ -40,7 +40,7 @@ Add images to your application
 ##### Input
 ```js
 {
-  medias: _array of image url_
+  medias: /* array of image url */
 }
 ```
 
@@ -69,8 +69,8 @@ Get the image set in your application
 ```js
 ##### Input
 {
-  page: _pagination number_,
-  size: _number of images per page_
+  page: /* pagination number */,
+  size: /* number of images per page */
 }
 ```
 
