@@ -107,7 +107,7 @@ Search similar image from your image set
   mediaUrl: an image URL,
   base64: a base64 encoded image,
   // optional
-  area: rectangle within the input image for search (see example)
+  area: use a cropped area instead of the whole image (see example)
 }
 ```
 
@@ -118,7 +118,7 @@ Promise
 ```js
 similarSearch.searchImage({
   mediaUrl: 'https://example.com/example_1.jpg',
-  // do similar search using the 200x200 rectangle at (100, 100) in the input image
+  // crop a 200x200 area where the top left corner is at (100, 100) of the original image
   area: {
     x: 100,
     y: 100,
@@ -168,7 +168,7 @@ console.log(predictionModels);
   mediaUrl: an image URL,
   base64: a base64 encoded image,
   // optional
-  area: rectangle within the input image for prediction (see example)
+  area: use a cropped area instead of the whole image (see example)
 }
 ```
 
@@ -188,7 +188,7 @@ Promise
 imagePrediction.predictImage({
   modelId: imagePrediction.models.GENERAL,
   mediaUrl: 'https://example.com/example_1.jpg',
-  // do similar search using the 200x200 rectangle at (100, 100) in the input image
+  // crop a 200x200 area where the top left corner is at (100, 100) of the original image
   area: {
     x: 100,
     y: 100,
