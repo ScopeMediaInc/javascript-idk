@@ -27,6 +27,7 @@ Before start, you need to [sign up](https://api.scopemedia.com/#/signup) and [cr
 
 Similar Image Search
 -----
+Similar Image Search allows you to create an image set and search similar image in it
 
 ### Initialization
 
@@ -136,6 +137,7 @@ similarSearch.searchImage({
 
 Image Prediction
 -----
+Image Prediction analyzes the image content
 
 ### Initialization
 ```js
