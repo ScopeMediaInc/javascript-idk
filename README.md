@@ -49,7 +49,7 @@ Add image(s) to your application's image set
 ```
 
 ##### Return
-Promise
+**Promise** object
 
 ##### Example
 ```js
@@ -80,7 +80,7 @@ Get your application's image set
 ```
 
 ##### Return
-Promise
+**Promise** object
 
 ##### Example
 ```js
@@ -112,7 +112,7 @@ Search similar image from your image set
 ```
 
 ##### Return
-Promise
+**Promise** object
 
 ##### Example
 ```js
@@ -173,7 +173,7 @@ console.log(predictionModels);
 ```
 
 ##### Return
-Promise
+**Promise** object
 
 ##### Example
 ```js
