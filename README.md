@@ -21,6 +21,7 @@ AMD:
 const scopemedia = require('PATH_TO/scopemedia.min.js');
 ```
 
+
 Authentication
 -----
 Before start, you need to [sign up](https://api.scopemedia.com/#/signup) and [create API key](https://api.scopemedia.com/#/dashboard/products/ScopeCheck/feature). Each application you created is paired with one client ID and one client secret, which are needed to initialize the SDK.
