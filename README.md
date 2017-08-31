@@ -1,10 +1,10 @@
 ScopeMedia JavaScript SDK
 =====
-A JavaScript SDK to easily integrate [ScopeMedia API](https://developer.scopemedia.com/documentation/) in your application
+A JavaScript SDK to easily integrate [ScopeMedia API](https://developer.scopemedia.com/documentation/) in your application.
 
 Installation
 -----
-Get the latest build SDK in **/build** folder or from ScopeMedia server: [https://developer.scopemedia.com/js/scopemedia.min.js](https://developer.scopemedia.com/js/scopemedia.min.js)
+Get the latest build SDK in **/build** folder or from ScopeMedia server: [https://developer.scopemedia.com/js/scopemedia.min.js](https://developer.scopemedia.com/js/scopemedia.min.js).
 
 Script tag:
 ```js
@@ -27,20 +27,20 @@ Before start, you need to [sign up](https://api.scopemedia.com/#/signup) and [cr
 
 Similar Image Search
 -----
-Similar Image Search allows you to create an image set and search similar image in it
+Similar Image Search allows you to create an image set and search similar images in it.
 
 ### Initialization
 
 ```js
 // Obtain your application's client ID and secret from dashboard
-const clientId = 'YOUR_CLIENT_ID';
-const clientSecret = 'YOUR_CLIENT_SECRET';
+const clientId = 'YOUR_CLIENT_ID',
+      clientSecret = 'YOUR_CLIENT_SECRET';
 
 const similarSearch = new scopemedia.image.SimilarSearch(clientId, clientSecret);
 ```
 
 ### .addImage
-Add image(s) to your application's image set
+Add image(s) to your application's image set.
 
 ##### Input
 ```
@@ -70,7 +70,7 @@ similarSearch.addImage({
 ```
 
 ### .getAllImage
-Get your application's image set
+Get your application's image set.
 
 ##### Input
 ```
@@ -98,7 +98,7 @@ similarSearch.getAllImage({
 ```
 
 ### .searchImage
-Search similar image from your image set
+Search similar image from your image set.
 
 ##### Input
 ```
@@ -137,19 +137,19 @@ similarSearch.searchImage({
 
 Image Prediction
 -----
-Image Prediction analyzes the image content
+Image Prediction analyzes the image content.
 
 ### Initialization
 ```js
 // Obtain your application's client ID and secret from dashboard
-const clientId = 'YOUR_CLIENT_ID';
-const clientSecret = 'YOUR_CLIENT_SECRET';
+const clientId = 'YOUR_CLIENT_ID',
+      clientSecret = 'YOUR_CLIENT_SECRET';
 
 const imagePrediction = new scopemedia.image.Prediction(clientId, clientSecret);
 ```
 
 ### .getModels
-Get the list of prediction model
+Get the list of prediction model.
 
 ##### Return
 String array
@@ -161,6 +161,7 @@ console.log(predictionModels);
 ```
 
 ### .predictImage
+Return the image content as a list of tags which includes a text label and it's relevance score.
 
 ##### Input
 ```
