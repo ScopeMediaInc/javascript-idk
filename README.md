@@ -11,14 +11,9 @@ Script tag:
 <script type="text/javascript" src="https://developer.scopemedia.com/js/scopemedia.min.js"></script>
 ```
 
-CommonJS:
-```js
-import scopemedia from 'PATH_TO/scopemedia.min.js';
-```
-
 AMD:
 ```js
-const scopemedia = require('PATH_TO/scopemedia.min.js');
+const {scopemedia} = require('PATH_TO/scopemedia.min.js');
 ```
 
 Authentication
