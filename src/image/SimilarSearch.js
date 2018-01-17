@@ -33,7 +33,7 @@ export default class SimilarSearch {
   searchImage({mediaId, mediaUrl, base64, area}) {
     var payload = {};
 
-    if (!isNaN(mediaId)) {
+    if (!isNaN(parseInt(mediaId))) {
       payload.mediaId = mediaId;
     } else if (typeof mediaUrl === 'string' && mediaUrl.length > 0) {
       payload.mediaUrl = mediaUrl;
