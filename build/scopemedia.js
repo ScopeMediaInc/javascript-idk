@@ -91,9 +91,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 // import axios from 'axios';
 
 var API_BASE_URL = 'https://api.scopemedia.com';
+var QA_API_BASE_URL = 'http://192.168.0.142:8080';
 
 var RequestHandler = function () {
-  function RequestHandler(clientId, clientSecret) {
+  function RequestHandler(clientId, clientSecret, apiEnvironment) {
     _classCallCheck(this, RequestHandler);
 
     if (typeof clientId !== 'string' || typeof clientSecret !== 'string' || clientId.length === 0 || clientSecret.length === 0) {
@@ -101,6 +102,7 @@ var RequestHandler = function () {
     }
     this.clientId = clientId;
     this.clientSecret = clientSecret;
+    this.apiEnvironment = apiEnvironment;
   }
 
   _createClass(RequestHandler, [{
@@ -108,7 +110,7 @@ var RequestHandler = function () {
     value: function sendRequest(params) {
       var _this = this;
 
-      params.url = API_BASE_URL + params.apiUrl;
+      params.url = this.apiEnvironment === 'QA' ? QA_API_BASE_URL : API_BASE_URL + params.apiUrl;
 
       return new Promise(function (resolve, reject) {
         var xhr = new XMLHttpRequest();
@@ -272,7 +274,7 @@ var SimilarSearch = function () {
 
       var payload = {};
 
-      if (!isNaN(mediaId)) {
+      if (!isNaN(parseInt(mediaId, 10))) {
         payload.mediaId = mediaId;
       } else if (typeof mediaUrl === 'string' && mediaUrl.length > 0) {
         payload.mediaUrl = mediaUrl;

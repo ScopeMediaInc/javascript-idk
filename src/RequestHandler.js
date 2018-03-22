@@ -1,19 +1,21 @@
 // import axios from 'axios';
 
 const API_BASE_URL = 'https://api.scopemedia.com';
+const QA_API_BASE_URL = 'http://192.168.0.142:8080';
 
 export default class RequestHandler {
-  constructor(clientId, clientSecret) {
+  constructor(clientId, clientSecret, apiEnvironment) {
     if (typeof clientId !== 'string' || typeof clientSecret !== 'string' ||
         clientId.length === 0 || clientSecret.length === 0) {
       throw new Error('Client ID or secret is undefined');
     }
     this.clientId = clientId;
     this.clientSecret = clientSecret;
+    this.apiEnvironment = apiEnvironment;
   }
 
   sendRequest(params) {
-    params.url = API_BASE_URL + params.apiUrl;
+    params.url = (this.apiEnvironment === 'QA' ? QA_API_BASE_URL : API_BASE_URL) + params.apiUrl;
 
     return new Promise((resolve, reject) => {
       var xhr = new XMLHttpRequest();

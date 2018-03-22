@@ -1,8 +1,8 @@
 import RequestHandler from '../RequestHandler.js';
 
 export default class Prediction {
-  constructor(clientId, clientSecret) {
-    this.requestHandler = new RequestHandler(clientId, clientSecret);
+  constructor(clientId, clientSecret, apiEnvironment) {
+    this.requestHandler = new RequestHandler(clientId, clientSecret, apiEnvironment);
     this.models = {
       DOG: 'dog',
       FASHION: 'fashion-v1',

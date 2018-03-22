@@ -1,8 +1,8 @@
 import RequestHandler from '../RequestHandler.js';
 
 export default class SimilarSearch {
-  constructor(clientId, clientSecret) {
-    this.requestHandler = new RequestHandler(clientId, clientSecret);
+  constructor(clientId, clientSecret, apiEnvironment) {
+    this.requestHandler = new RequestHandler(clientId, clientSecret, apiEnvironment);
   }
 
   addImage({medias}) {
@@ -33,7 +33,7 @@ export default class SimilarSearch {
   searchImage({mediaId, mediaUrl, base64, area}) {
     var payload = {};
 
-    if (!isNaN(parseInt(mediaId))) {
+    if (!isNaN(parseInt(mediaId, 10))) {
       payload.mediaId = mediaId;
     } else if (typeof mediaUrl === 'string' && mediaUrl.length > 0) {
       payload.mediaUrl = mediaUrl;
